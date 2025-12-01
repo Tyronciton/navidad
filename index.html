@@ -91,21 +91,7 @@
 
       <p class="lead">This project shows how robots and humans can share joy, kindness, and new traditions during the holidays.</p>
 
-      <p class="lead" style="font-weight:700">Thank you for scanning the QR code!</p>
-
-      <div class="features" aria-hidden="true">
-        <span class="pill">Robots cantarines</span>
-        <span class="pill">Luces reactivas</span>
-        <span class="pill">Decoración holográfica</span>
-        <span class="pill">Tradiciones nuevas</span>
-      </div>
-
-      <div class="actions">
-        <button id="copyBtn" title="Copiar enlace de esta página">Copiar enlace</button>
-        <button id="downloadBtn" class="ghost" title="Descargar como HTML">Descargar .html</button>
-      </div>
-
-      <footer class="note">Consejo: sube este archivo a GitHub Pages o Netlify para obtener la URL que convertirás en QR.</footer>
+      <p class="lead" style="font-weight:700"></footer>
     </section>
 
     <aside class="media">
@@ -152,15 +138,6 @@
     // copy current page URL
     const copyBtn = document.getElementById('copyBtn');
     const downloadBtn = document.getElementById('downloadBtn');
-    copyBtn.addEventListener('click', async ()=>{
-      try{
-        await navigator.clipboard.writeText(location.href);
-        copyBtn.textContent = 'Enlace copiado!';
-        setTimeout(()=> copyBtn.textContent = 'Copiar enlace',1500);
-      }catch(e){
-        alert('No se pudo copiar. Puedes copiar la URL manualmente desde la barra de direcciones.');
-      }
-    });
 
     // download the HTML source as a file
     downloadBtn.addEventListener('click', ()=>{
